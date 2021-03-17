@@ -6,15 +6,32 @@ import {PrimaryButton} from '@fluentui/react'
 
 export default function Home(props) {
 
-
+  const myTheme = createTheme({
+  palette: {
+    themePrimary: '#d40000',
+    themeLighterAlt: '#fdf3f3',
+    themeLighter: '#f8d0d0',
+    themeLight: '#f2a9a9',
+    themeTertiary: '#e55c5c',
+    themeSecondary: '#d91a1a',
+    themeDarkAlt: '#be0000',
+    themeDark: '#a10000',
+    themeDarker: '#770000',
+    neutralLighterAlt: '#faf9f8',
+    neutralLighter: '#f3f2f1',
+    neutralLight: '#edebe9',
+    neutralQuaternaryAlt: '#e1dfdd',
+    neutralQuaternary: '#d0d0d0',
+    neutralTertiaryAlt: '#c8c6c4',
+    neutralTertiary: '#a19f9d',
+    neutralSecondary: '#605e5c',
+    neutralPrimaryAlt: '#3b3a39',
+    neutralPrimary: '#323130',
+    neutralDark: '#201f1e',
+    black: '#000000',
+    white: '#ffffff',
+  }});
   return (
-      <div >{props.movie.map(movies =>{return(<div key={movies.imdbID}><h1 >{movies.Title}</h1> <p>{movies.Type}</p><img src={movies.Poster} alt={ `${movies.Title} Poster`}/></div>)})}</div>
+      <div ><PrimaryButton>Hi</PrimaryButton></div>)})}</div>
 )
-}
-
-Home.getInitialProps = async () =>{
-      const res  = await fetch('http://www.omdbapi.com/?apikey=ace993e9&s=mr%20robot')
-      const {Search} = await res.json()
-
-      return{movie: Search}
 }

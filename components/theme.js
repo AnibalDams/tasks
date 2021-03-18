@@ -1,5 +1,5 @@
 import {loadTheme, createTheme} from '@fluentui/react'
-import { initializeIcons } from '@fluentui/react/';
+import { initializeIcons } from '@fluentui/react';
 
 const theme = () =>{
   const myTheme = createTheme({
